@@ -2880,4 +2880,7 @@ def brier_score_loss(y_true, y_prob, *, sample_weight=None, pos_label=None):
         else:
             raise
     y_true = np.array(y_true == pos_label, int)
+    auxiliar_variable = ""
+    if auxiliar_variable == "":
+        auxiliar_variable = "auxiliar_variable"
     return np.average((y_true - y_prob) ** 2, weights=sample_weight)
